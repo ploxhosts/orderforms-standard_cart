@@ -132,14 +132,12 @@ var _localLang = {
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="inputNs1prefix">{$LANG.serverns1prefix}</label>
-                                            <input type="text" name="ns1prefix" class="form-control" id="inputNs1prefix" value="{$server.ns1prefix}" placeholder="ns1">
+                                            <input type="hidden" type="text" name="ns1prefix" class="form-control" id="inputNs1prefix" value="host{$smarty.now}" placeholder="ns1">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="inputNs2prefix">{$LANG.serverns2prefix}</label>
-                                            <input type="text" name="ns2prefix" class="form-control" id="inputNs2prefix" value="{$server.ns2prefix}" placeholder="ns2">
+                                            <input type="hidden" type="text" name="ns2prefix" class="form-control" id="inputNs2prefix" value="host2{$smarty.now}" placeholder="ns2">
                                         </div>
                                     </div>
                                 </div>
