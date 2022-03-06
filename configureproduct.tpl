@@ -9,17 +9,10 @@ var _localLang = {
 
 <div id="order-standard_cart">
 
-    <div class="row">
-        <div class="cart-sidebar">
-            {include file="orderforms/standard_cart/sidebar-categories.tpl"}
-        </div>
-        <div class="cart-body">
-
             <div class="header-lined">
                 <h1 class="font-size-36">{$LANG.orderconfigure}</h1>
             </div>
 
-            {include file="orderforms/standard_cart/sidebar-categories-collapsed.tpl"}
 
             <form id="frmConfigureProduct">
                 <input type="hidden" name="configure" value="true" />
@@ -38,6 +31,9 @@ var _localLang = {
                         <div class="alert alert-danger w-hidden" role="alert" id="containerProductValidationErrors">
                             <p>{$LANG.orderForm.correctErrors}:</p>
                             <ul id="containerProductValidationErrorsList"></ul>
+                        </div>
+                        <div class="alert alert-success info-text-sm">
+                            Thank you for choosing PloxHost! Here is the last step to configure your server! Let's get you rockin and rollin!
                         </div>
 
                         {if $pricing.type eq "recurring"}
@@ -77,6 +73,7 @@ var _localLang = {
                                             </option>
                                         {/if}
                                     </select>
+                                    <span class="field-help-text">Choose how often you want to pay for your service!</span>
                                 </div>
                             </div>
                         {/if}
@@ -168,6 +165,18 @@ var _localLang = {
                                                         </option>
                                                     {/foreach}
                                                 </select>
+                                                {if $configoption.id eq 88 || $configoption.id eq 92}
+                                                <span class="field-help-text">Choose the location in which your server will deploy to!</span>
+                                                {/if}
+                                                {if $configoption.id eq 89 || $configoption.id eq 91}
+                                                <span class="field-help-text">A dedicated IP will let you join without a port. This also makes it easier for setting custom domains!</span>
+                                                <div class="alert alert-info info-text-sm">
+                                                    Want to learn what a dedicated IP is? <a href="https://support.plox.host/en/knowledgebase/article/whats-the-difference-between-a-dedicated-ip-domain-sub-domain-under-ploxhost">Click Here!</a>
+                                                </div>                
+                                                {/if}
+                                                {if $configoption.id eq 94}
+                                                <span class="field-help-text">Select your server software/jar!</span>               
+                                                {/if}
                                             </div>
                                         </div>
                                     {elseif $configoption.optiontype eq 2}
@@ -256,6 +265,12 @@ var _localLang = {
                                     {/if}
                                     {/foreach}
                                 </div>
+                                {if $configoption.id eq 94}
+                                <div class="alert alert-primary info-text-sm">
+                                    Note: Not all Modpack/Jar & Server Software Options are listed! Once your server has deployed, you can select more via our control panel. <a href="https://support.plox.host/en/knowledgebase/article/choosing-a-server-version">Click Here</a> to read more.
+                                </div>
+                                {/if}
+
                             </div>
 
                         {/if}
