@@ -124,7 +124,10 @@ var _localLang = {
                                     <div class="col-sm-6">
                                         <div class="form-group">
                                             <label for="inputRootpw">{$LANG.serverrootpw}</label>
-                                            <input type="password" name="rootpw" class="form-control" id="inputRootpw" value="{$server.rootpw}">
+                                            <div class="alert alert-success info-text-sm">
+                                                We have generated a secure password for your server. You will be emailed this password after purchase.
+                                            </div>
+                                            <input type="hidden" name="rootpw" class="form-control" id="inputRootpw" value="{$smarty.now}">
                                         </div>
                                     </div>
                                 </div>

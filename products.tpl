@@ -14,6 +14,9 @@
                 {if $productGroup.tagline}
                     <p>{$productGroup.tagline}</p>
                 {/if}
+                <div class="alert alert-danger">
+                    Please order products via our main website at <a href="https://plox.host/">https://plox.host/</a>. This part of our website may remain buggy / un-usable. Contact us for more information.
+                </div>
               </div>
             </div>
             {if $errormessage}
