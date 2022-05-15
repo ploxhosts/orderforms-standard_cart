@@ -399,8 +399,7 @@
     padding: 6px 15px;
     font-size: 0.85em;
     background-color: #f8f8f8;
-    border-top: 1px solid #efefef;
-    border-bottom: 1px solid #efefef;
+    border: 2px solid #19aba6;
 }
 #order-standard_cart .product-info .product-title {
     margin: 0;
